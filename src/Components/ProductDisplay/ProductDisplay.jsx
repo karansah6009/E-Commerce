@@ -6,7 +6,7 @@ import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
     const { product } = props;
-    const {addToCart} = useContext(ShopContext);
+    const { addToCart } = useContext(ShopContext);
     return (
         <div className='productdisplay'>
             <div className="productdisplay-left">
@@ -42,16 +42,20 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-right-size">
                     <h1>Select Size</h1>
                     <div className="productdisplay-right-sizes">
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
-                        <div>XL</div>
-                        <div>XXL</div>
+                        <input type="radio" name="size" id="size-s" hidden />
+                        <label for="size-s">S</label>
+                        <input type="radio" name="size" id="size-m" hidden />
+                        <label for="size-m">M</label>
+
+                        <input type="radio" name="size" id="size-l" hidden />
+                        <label for="size-l">L</label>
+                        <input type="radio" name="size" id="size-xl" hidden />
+                        <label for="size-xl">XL</label>
                     </div>
                 </div>
-                <button onClick={()=>{addToCart(product.id)}}>Add TO CART</button>
-                <p className='productdisplay-right-category'><span>Category:</span> Women , T-Shirt, Crop Top</p>
-                <p className='productdisplay-right-category'><span>Tags:</span> Modern , Latest</p>
+                <button onClick={() => { addToCart(product.id) }}>Add TO CART</button>
+                <p className='productdisplay-right-category'><span>Category:</span> {product.category.toUpperCase()} , {product.spec}.</p>
+                <p className='productdisplay-right-category'><span>Tags:</span> Modern , Latest.</p>
             </div>
         </div>
     )

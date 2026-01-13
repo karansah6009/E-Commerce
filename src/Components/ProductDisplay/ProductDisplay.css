@@ -61,13 +61,21 @@
     margin: 30px 0px;
     gap: 20px;
 }
-.productdisplay-right-sizes div{
-    padding: 18px;
-    background: #dbdbdb;
-    border-radius: 3px;
-    border:1px solid #ebebeb;
-    cursor: pointer;
-    border-radius: 50%;
+label {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+  cursor: pointer;
+  margin-right: 10px;
+}
+input:checked + label {
+  background: #ebebeb;
+  border: 1px solid #ff4141;
+  color: #ff4141;
 }
 .productdisplay-right button{
     padding: 20px 40px;
@@ -86,4 +94,9 @@
 }
 .productdisplay-right-category span{
     font-weight: 600;
+}
+.productdisplay-right-sizes div:active{
+    background: #ff4141;
+    color: white;
+    border: none;
 }

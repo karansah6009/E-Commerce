@@ -11,6 +11,7 @@ import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kid_banner from './Components/Assets/banner_kids.png';
 import LoginPage from './Pages/LoginPage';
+import LatestCollection from './Pages/LatestCollection';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         < Route path='/cart' element={<Cart />} />
         < Route path='/login' element={<LoginSignUp />} />
         < Route path='/loginPage' element={<LoginPage />} />
+        < Route path='/latest-collection' element={<LatestCollection />} />
         </Routes>
         <Footer />
       </BrowserRouter>

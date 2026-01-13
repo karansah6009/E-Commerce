@@ -30,7 +30,7 @@
     color:#252525;
     padding: 10px;
 }
-.footer-links li:hover{
+.footer-links a:hover{
     text-decoration: underline;
 }   
 li{
