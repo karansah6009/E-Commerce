@@ -10,12 +10,12 @@ const LoginPage = () => {
           <input type="email" placeholder='Email Address'/>
           <input type="password" placeholder='Password'/>
         </div>
-        <button>Continue</button>
-        <p className='login-signup'>Don't have an account? <span>Sign Up</span></p>
         <div className="loginsignup-agree">
           <input type="checkbox" name='' id=''/>
           <p>By clicking continue, you agree to our Terms of Service and Privacy Policy.</p>
         </div>
+        <button>Continue</button>
+        <p className='login-signup'>Don't have an account? <span>Sign Up</span></p>
         </div>
       
     </div>

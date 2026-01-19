@@ -31,6 +31,15 @@
     outline: none;
     color: #5c5c5c;
 }
+.login-fields input::placeholder{
+    font-size: 20px;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+.login-fields input:focus{
+    border: 1px solid #ff4141;
+    transition: 0.3s;
+}
 .login button{
     width: 580px;
     height:72px;
@@ -53,6 +62,11 @@
     color: #ff4141;
     cursor: pointer;
     font-weight: 600;
+}
+.loginsignup-agree input{
+    width:20px;
+    height:20px;
+    cursor: pointer;
 }
 .loginsignup-agree{
     display:flex;

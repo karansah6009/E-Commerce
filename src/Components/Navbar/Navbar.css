@@ -61,8 +61,10 @@
     background: white;
     cursor: pointer;
 }
-.nav-login-cart button:active{
+.nav-login-cart button:hover{
    background: rgb(220, 220, 220);
+   color: #cb7070;
+   transition: 0.3s;
 }
 .nav-login-cart button:active{
     background: #f3f3f3;
