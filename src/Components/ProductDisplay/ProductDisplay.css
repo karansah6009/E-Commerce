@@ -89,6 +89,11 @@ input:checked + label {
     cursor: pointer;
     margin-bottom: 40px;
 }
+
+.productdisplay-right button:hover{
+    border-radius: 25px;
+    transition: 0.5s;
+}
 .productdisplay-right-category{
     margin-top: 10px;
 }

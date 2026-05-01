@@ -53,7 +53,7 @@ const ProductDisplay = (props) => {
                         <label for="size-xl">XL</label>
                     </div>
                 </div>
-                <button onClick={() => { addToCart(product.id) }}>Add TO CART</button>
+                <button onClick={() => { addToCart(product.id) }}>ADD TO CART</button>
                 <p className='productdisplay-right-category'><span>Category:</span> {product.category.toUpperCase()} , {product.spec}.</p>
                 <p className='productdisplay-right-category'><span>Tags:</span> Modern , Latest.</p>
             </div>
