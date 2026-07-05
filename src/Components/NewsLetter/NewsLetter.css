@@ -49,3 +49,6 @@
     color: white;
     font-size: 18px;
 }
+.newsletter button:active{
+    transform: scale(0.97);
+}

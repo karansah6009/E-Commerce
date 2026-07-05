@@ -1,6 +1,8 @@
 import React from 'react'
 import './NewsLetter.css'
-
+let msg = () =>{
+  alert("Subscribed");
+}
 const NewsLetter = () => {
   return (
     <div className="newsletter">
@@ -8,7 +10,7 @@ const NewsLetter = () => {
       <p>Subscribe To Our Newsletter and stay updated</p>
       <div>
         <input type="email" placeholder='Your Email Id' />
-        <button>Subscribe</button>
+        <button onClick={msg}>Subscribe</button>
       </div>
     </div>
   )

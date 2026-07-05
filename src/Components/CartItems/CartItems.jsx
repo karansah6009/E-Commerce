@@ -1,11 +1,27 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
-
+import pin_code from './PinCode'
 
 const CartItems = () => {
-    const { getTotalCartAmount,all_product, cartItems, removeFromCart } = useContext(ShopContext)
+
+    // pin = what the user types, result = message shown after checking
+    const [pin, setPin] = useState("");
+    const [result, setResult] = useState("");
+
+    const check = () => {
+        // look for an entry in pin_code.js whose pincode matches what user typed
+        const found = pin_code.find((item) => item.pincode === pin);
+
+        if (found) {
+            setResult(`✅Deliverable! Area: ${found.locality}`);
+        } else {
+            setResult("❌Not deliverable to this pincode.");
+        }
+    }
+
+    const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext)
     return (
         <div className='cartitems'>
             <div className="cartitems-format-main">
@@ -43,10 +59,10 @@ const CartItems = () => {
                         </div>
                         <hr />
                         <div className="cartitems-total-item">
-                           <p>Shipping Fee</p>
-                           <p>Free</p>
+                            <p>Shipping Fee</p>
+                            <p>Free</p>
                         </div>
-                        <hr/>
+                        <hr />
                         <div className="cartitems-total-item">
                             <h3>Total</h3>
                             <h3>Rs.{getTotalCartAmount()}</h3>
@@ -55,11 +71,17 @@ const CartItems = () => {
                     <button>PROCEED TO CHECKOUT</button>
                 </div>
                 <div className="cartitems-promocode">
-                    <p>If you have a promo code , Enter it here</p>
+                    <p>Enter your pincode here</p>
                     <div className="cartitems-promobox">
-                        <input type="text" placeholder='PromoCode'/>
-                        <button>Submit</button>
+                        <input
+                            type="text"
+                            placeholder='PinCode'
+                            value={pin}
+                            onChange={(e) => setPin(e.target.value)}
+                        />
+                        <button onClick={check}>Submit</button>
                     </div>
+                    {result && <p>{result}</p>}
                 </div>
             </div>
         </div>
